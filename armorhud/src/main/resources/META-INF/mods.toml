@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT"
+
+[[dependencies.armorhud]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36.2.39,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.armorhud]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"
+
+[[mods]]
+modId="armorhud"
+version="1.0.0"
+displayName="Armor HUD"
+description='''
+Displays armor durability with color-coded wear indicators and a customizable HUD position.
+'''
