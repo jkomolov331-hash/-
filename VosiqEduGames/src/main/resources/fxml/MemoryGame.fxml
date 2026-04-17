@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="uz.vosiq.edugames.controllers.MemoryGameController"
+    styleClass="game-screen" spacing="0">
+  <HBox styleClass="game-header" spacing="20" alignment="CENTER_LEFT">
+    <padding><Insets top="15" right="25" bottom="15" left="25"/></padding>
+    <Button fx:id="backBtn" text="← Orqaga" styleClass="back-btn" onAction="#onBack"/>
+    <Region HBox.hgrow="ALWAYS"/>
+    <Label fx:id="pairsLabel" styleClass="score-label"/>
+    <Label fx:id="timerLabel" styleClass="timer-label"/>
+  </HBox>
+  <StackPane VBox.vgrow="ALWAYS">
+    <VBox alignment="CENTER" spacing="20">
+      <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+      <GridPane fx:id="cardGrid" hgap="10" vgap="10" alignment="CENTER"/>
+    </VBox>
+    <VBox fx:id="resultPane" visible="false" alignment="CENTER" spacing="20" styleClass="result-pane">
+      <Label text="🎉" style="-fx-font-size:60px;"/>
+      <Label text="O'yin tugadi!" styleClass="result-message"/>
+      <Label fx:id="resultLabel" styleClass="result-score"/>
+      <HBox spacing="20" alignment="CENTER">
+        <Button text="🔄 Qayta" styleClass="retry-btn" onAction="#onRestart"/>
+        <Button text="🏠 Asosiy" styleClass="home-btn" onAction="#onBack"/>
+      </HBox>
+    </VBox>
+  </StackPane>
+</VBox>

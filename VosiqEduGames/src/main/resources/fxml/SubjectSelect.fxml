@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="uz.vosiq.edugames.controllers.SubjectSelectController"
+           styleClass="main-bg">
+
+    <VBox alignment="CENTER" spacing="20" maxWidth="480">
+
+        <Label fx:id="titleLabel" text="O'yinlar" styleClass="page-title">
+            <VBox.margin><Insets top="30"/></VBox.margin>
+        </Label>
+
+        <VBox spacing="10" alignment="CENTER_LEFT"
+              style="-fx-background-color: rgba(255,255,255,0.1); -fx-background-radius: 16; -fx-padding: 30;">
+
+            <Label fx:id="subjectLabel" text="Fan tanlang" styleClass="form-label"/>
+            <ComboBox fx:id="subjectCombo" maxWidth="360" prefHeight="42" styleClass="game-combo"/>
+
+            <Label fx:id="gameTypeLabel" text="O'yin turi" styleClass="form-label">
+                <VBox.margin><Insets top="14"/></VBox.margin>
+            </Label>
+            <ComboBox fx:id="gameTypeCombo" maxWidth="360" prefHeight="42" styleClass="game-combo"/>
+
+        </VBox>
+
+        <HBox spacing="14" alignment="CENTER">
+            <Button fx:id="btnBack" text="Orqaga" styleClass="menu-btn-secondary"
+                    prefWidth="160" prefHeight="46" onAction="#goBack"/>
+            <Button fx:id="btnStart" text="Boshlash" styleClass="menu-btn"
+                    prefWidth="180" prefHeight="46" onAction="#startGame"/>
+        </HBox>
+
+    </VBox>
+</StackPane>

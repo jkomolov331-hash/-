@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="uz.vosiq.edugames.controllers.MainMenuController"
+           styleClass="main-bg">
+
+    <VBox alignment="CENTER" spacing="0">
+
+        <!-- Language Bar Top -->
+        <HBox alignment="CENTER_RIGHT" spacing="8" style="-fx-padding: 10 20 0 0;">
+            <Button fx:id="btnLangUz" text="O'zbek" styleClass="lang-btn" onAction="#setLangUz"/>
+            <Button fx:id="btnLangRu" text="Русский" styleClass="lang-btn" onAction="#setLangRu"/>
+            <Button fx:id="btnLangEn" text="English" styleClass="lang-btn" onAction="#setLangEn"/>
+        </HBox>
+
+        <!-- Logo -->
+        <ImageView fx:id="logoView" fitWidth="140" fitHeight="140" preserveRatio="true"
+                   style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 15, 0, 0, 4);">
+            <VBox.margin><Insets top="20"/></VBox.margin>
+        </ImageView>
+
+        <!-- Title -->
+        <Label fx:id="titleLabel" text="Vosiq International School"
+               styleClass="main-title">
+            <VBox.margin><Insets top="16"/></VBox.margin>
+        </Label>
+        <Label fx:id="subtitleLabel" text="Ta'limiy O'yinlar Platformasi"
+               styleClass="main-subtitle">
+            <VBox.margin><Insets top="6"/></VBox.margin>
+        </Label>
+
+        <!-- Divider -->
+        <Separator style="-fx-background-color: rgba(255,255,255,0.3);" maxWidth="300">
+            <VBox.margin><Insets top="24" bottom="24"/></VBox.margin>
+        </Separator>
+
+        <!-- Main Buttons -->
+        <VBox alignment="CENTER" spacing="14">
+            <Button fx:id="btnGames" text="O'yinlar" styleClass="menu-btn" onAction="#openGames"
+                    maxWidth="280" prefHeight="52"/>
+            <Button fx:id="btnAbout" text="Ilova haqida" styleClass="menu-btn-secondary" onAction="#openAbout"
+                    maxWidth="280" prefHeight="52"/>
+            <Button fx:id="btnExit" text="Chiqish" styleClass="menu-btn-danger" onAction="#exitApp"
+                    maxWidth="280" prefHeight="52"/>
+        </VBox>
+
+        <!-- Footer -->
+        <Label text="© 2025-2026 Vosiq International School"
+               style="-fx-text-fill: rgba(255,255,255,0.5); -fx-font-size: 11px;">
+            <VBox.margin><Insets top="30" bottom="10"/></VBox.margin>
+        </Label>
+
+    </VBox>
+</StackPane>

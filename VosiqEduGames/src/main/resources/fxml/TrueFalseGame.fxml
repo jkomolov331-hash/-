@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="uz.vosiq.edugames.controllers.TrueFalseGameController"
+            styleClass="main-bg">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20"
+              style="-fx-padding: 14 20; -fx-background-color: rgba(0,0,0,0.25);">
+            <Button fx:id="btnBack" text="Orqaga" styleClass="small-btn" onAction="#goBack"/>
+            <Label fx:id="titleLabel" text="To'g'ri / Noto'g'ri" styleClass="bar-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="timerLabel" text="Vaqt: 10" styleClass="timer-label"/>
+            <Label fx:id="scoreLabel" text="Ball: 0" styleClass="score-label"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="24" style="-fx-padding: 40 80;">
+            <HBox alignment="CENTER_LEFT">
+                <Label fx:id="questionNumLabel" text="Savol 1/10" styleClass="question-num"/>
+            </HBox>
+            <ProgressBar fx:id="progressBar" progress="0" maxWidth="Infinity"/>
+
+            <Label fx:id="questionLabel" text="Savol matni..."
+                   styleClass="question-text-big" wrapText="true" maxWidth="600" alignment="CENTER"/>
+
+            <Label fx:id="feedbackLabel" text="" styleClass="feedback-label"/>
+
+            <HBox spacing="30" alignment="CENTER">
+                <Button fx:id="btnTrue" text="To'g'ri" styleClass="true-btn"
+                        prefWidth="200" prefHeight="70" onAction="#answerTrue"/>
+                <Button fx:id="btnFalse" text="Noto'g'ri" styleClass="false-btn"
+                        prefWidth="200" prefHeight="70" onAction="#answerFalse"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

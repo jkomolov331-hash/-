@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="uz.vosiq.edugames.controllers.AboutController"
+           styleClass="main-bg">
+
+    <VBox alignment="CENTER" spacing="14" maxWidth="600">
+
+        <ImageView fx:id="logoView" fitWidth="110" fitHeight="110" preserveRatio="true">
+            <VBox.margin><Insets top="20"/></VBox.margin>
+        </ImageView>
+
+        <Label fx:id="titleLabel" text="Ilova haqida" styleClass="page-title"/>
+
+        <VBox alignment="CENTER" spacing="10"
+              style="-fx-background-color: rgba(255,255,255,0.1); -fx-background-radius: 16; -fx-padding: 24 40;">
+
+            <Label fx:id="appNameLabel" text="Vosiq EduGames"
+                   style="-fx-font-size: 26px; -fx-text-fill: #FFD700; -fx-font-weight: bold;"/>
+            <Label fx:id="versionLabel" text="Versiya: 1.0.0" styleClass="about-label"/>
+            <Separator style="-fx-background-color: rgba(255,255,255,0.3);" maxWidth="300">
+                <VBox.margin><Insets top="6" bottom="6"/></VBox.margin>
+            </Separator>
+            <Label fx:id="schoolLabel" text="" styleClass="about-label-bold"/>
+            <Separator style="-fx-background-color: rgba(255,255,255,0.3);" maxWidth="300">
+                <VBox.margin><Insets top="6" bottom="6"/></VBox.margin>
+            </Separator>
+            <Label fx:id="creatorLabel" text="" styleClass="about-label-bold"
+                   style="-fx-text-fill: #FFD700; -fx-font-size: 17px; -fx-font-weight: bold;"/>
+            <Label fx:id="classLabel" text="" styleClass="about-label"/>
+            <Label fx:id="yearLabel" text="" styleClass="about-label"/>
+            <Separator style="-fx-background-color: rgba(255,255,255,0.3);" maxWidth="300">
+                <VBox.margin><Insets top="6" bottom="6"/></VBox.margin>
+            </Separator>
+            <Label fx:id="descLabel" text="" styleClass="about-label" wrapText="true" alignment="CENTER"/>
+        </VBox>
+
+        <Button fx:id="btnBack" text="Orqaga" styleClass="menu-btn-secondary"
+                prefWidth="180" prefHeight="46" onAction="#goBack">
+            <VBox.margin><Insets top="10" bottom="20"/></VBox.margin>
+        </Button>
+
+    </VBox>
+</StackPane>

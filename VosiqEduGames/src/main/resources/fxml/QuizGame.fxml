@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="uz.vosiq.edugames.controllers.QuizGameController"
+            styleClass="main-bg">
+
+    <!-- TOP BAR -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20"
+              style="-fx-padding: 14 20; -fx-background-color: rgba(0,0,0,0.25);">
+            <Button fx:id="btnBack" text="Orqaga" styleClass="small-btn" onAction="#goBack"/>
+            <Label fx:id="titleLabel" text="Viktorina" styleClass="bar-title"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="timerLabel" text="Vaqt: 15" styleClass="timer-label"/>
+            <Label fx:id="scoreLabel" text="Ball: 0" styleClass="score-label"/>
+        </HBox>
+    </top>
+
+    <!-- CENTER: Question -->
+    <center>
+        <VBox alignment="CENTER" spacing="20" style="-fx-padding: 30 60;">
+
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label fx:id="questionNumLabel" text="Savol 1/10" styleClass="question-num"/>
+                <Region HBox.hgrow="ALWAYS"/>
+            </HBox>
+            <ProgressBar fx:id="progressBar" progress="0" maxWidth="Infinity"/>
+
+            <Label fx:id="questionLabel" text="Savol matni..."
+                   styleClass="question-text" wrapText="true" maxWidth="700" alignment="CENTER"/>
+
+            <Label fx:id="feedbackLabel" text="" styleClass="feedback-label"/>
+
+            <!-- Answer Buttons -->
+            <GridPane hgap="14" vgap="14" alignment="CENTER">
+                <Button fx:id="btn0" text="A) ..." styleClass="option-btn"
+                        prefWidth="310" prefHeight="60" wrapText="true"
+                        onAction="#selectOption0"
+                        GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <Button fx:id="btn1" text="B) ..." styleClass="option-btn"
+                        prefWidth="310" prefHeight="60" wrapText="true"
+                        onAction="#selectOption1"
+                        GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <Button fx:id="btn2" text="C) ..." styleClass="option-btn"
+                        prefWidth="310" prefHeight="60" wrapText="true"
+                        onAction="#selectOption2"
+                        GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <Button fx:id="btn3" text="D) ..." styleClass="option-btn"
+                        prefWidth="310" prefHeight="60" wrapText="true"
+                        onAction="#selectOption3"
+                        GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            </GridPane>
+
+        </VBox>
+    </center>
+</BorderPane>

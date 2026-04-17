@@ -1,0 +1,108 @@
+/* Vosiq EduGames - Global Stylesheet */
+
+* {
+    -fx-font-family: "Segoe UI", "Arial Unicode MS", Arial, sans-serif;
+}
+
+.root {
+    -fx-background-color: #1a1a2e;
+}
+
+/* ScrollPane transparent */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: #1e2a3a;
+    -fx-pref-width: 8px;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #4a5568;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #667eea;
+}
+
+.scroll-bar:horizontal {
+    -fx-pref-height: 0;
+    -fx-opacity: 0;
+}
+
+/* Buttons */
+.button:focused {
+    -fx-background-color: #667eea;
+}
+
+/* TextField */
+.text-field {
+    -fx-background-color: #2d3748;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+    -fx-border-color: #4a5568;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+}
+
+.text-field:focused {
+    -fx-border-color: #667eea;
+    -fx-border-width: 2;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-color: #2d3748;
+    -fx-text-fill: white;
+    -fx-background-radius: 8;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #2d3748;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #2d3748;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #667eea33;
+}
+
+/* Alert */
+.dialog-pane {
+    -fx-background-color: #1e2a3a;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #16213e;
+}
+
+.dialog-pane .content {
+    -fx-text-fill: #a0aec0;
+}
+
+/* ProgressBar */
+.progress-bar > .track {
+    -fx-background-color: #2d3748;
+    -fx-background-radius: 4;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(to right, #667eea, #764ba2);
+    -fx-background-radius: 4;
+    -fx-background-insets: 0;
+}
+
+/* Separator */
+.separator .line {
+    -fx-border-color: #2d3748;
+}

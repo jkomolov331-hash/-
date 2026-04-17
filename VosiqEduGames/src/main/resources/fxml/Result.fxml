@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="uz.vosiq.edugames.controllers.ResultController"
+           styleClass="main-bg">
+
+    <VBox alignment="CENTER" spacing="20">
+
+        <Label text="🏆" style="-fx-font-size: 72px;"/>
+
+        <Label fx:id="titleLabel" text="O'yin tugadi" styleClass="page-title"/>
+
+        <Label fx:id="resultLabel" text="Sizning balingiz: 7/10"
+               style="-fx-font-size: 28px; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+        <Label fx:id="messageLabel" text="Tabriklaymiz! 🎉"
+               style="-fx-font-size: 22px; -fx-text-fill: #2ecc71; -fx-font-weight: bold;"/>
+
+        <HBox spacing="20" alignment="CENTER">
+            <VBox.margin><Insets top="20"/></VBox.margin>
+            <Button fx:id="btnPlayAgain" text="Qayta o'ynash" styleClass="menu-btn"
+                    prefWidth="200" prefHeight="50" onAction="#playAgain"/>
+            <Button fx:id="btnMenu" text="Menyu" styleClass="menu-btn-secondary"
+                    prefWidth="160" prefHeight="50" onAction="#goMenu"/>
+        </HBox>
+
+    </VBox>
+</StackPane>
