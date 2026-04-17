@@ -1,0 +1,13 @@
+{
+  "key.armorhud.openHud": "Open Armor HUD Settings",
+  "armorhud.hud.settings": "HUD Settings",
+  "armorhud.hud.armor_settings": "Armor HUD Settings",
+  "armorhud.hud.toggle_inventory": "Toggle Inventory HUD",
+  "armorhud.hud.position": "Position",
+  "armorhud.hud.top_left": "Top Left",
+  "armorhud.hud.top_right": "Top Right",
+  "armorhud.hud.bottom_left": "Bottom Left",
+  "armorhud.hud.bottom_right": "Bottom Right",
+  "armorhud.hud.show_inventory": "Show in Inventory: ",
+  "armorhud.hud.close": "Close"
+}
